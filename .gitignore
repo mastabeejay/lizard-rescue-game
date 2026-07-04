@@ -1,0 +1,4 @@
+.claude/scheduled_tasks.lock
+node_modules/
+.DS_Store
+Thumbs.db

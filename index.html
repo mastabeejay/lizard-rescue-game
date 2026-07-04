@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>손으로 도마뱀 구조하기</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="stage">
+    <video id="camera" autoplay playsinline muted></video>
+    <canvas id="game"></canvas>
+  </div>
+
+  <div id="orientationHint" class="orientation-hint hidden">📱 화면을 가로로 돌리면 더 편하게 플레이할 수 있어요</div>
+
+  <div id="startOverlay" class="overlay">
+    <div class="overlay-box">
+      <p>손으로 도마뱀 구조하기</p>
+      <p class="sub">카메라로 손을 인식해서 플레이하는 게임입니다. 시작하면 카메라 권한을 요청합니다.</p>
+      <button id="startBtn" type="button">게임 시작 🎮</button>
+    </div>
+  </div>
+
+  <div id="loadingOverlay" class="overlay hidden">
+    <div class="overlay-box">
+      <p>카메라와 손 인식 모델을 불러오는 중...</p>
+    </div>
+  </div>
+
+  <div id="permissionError" class="overlay hidden">
+    <div class="overlay-box">
+      <p>카메라 접근이 필요합니다. 브라우저에서 카메라 권한을 허용한 뒤 새로고침 해주세요.</p>
+      <p class="hint" id="protocolHint"></p>
+    </div>
+  </div>
+
+  <div id="modelError" class="overlay hidden">
+    <div class="overlay-box">
+      <p>손 인식 모델을 불러오지 못했습니다. 인터넷 연결을 확인한 뒤 새로고침 해주세요.</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
